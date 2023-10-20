@@ -1,1 +1,1 @@
-# CNN-Person-Follower
+# CNN-Person-Detection
