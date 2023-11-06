@@ -1,6 +1,7 @@
 import numpy as np 
 from layer import layer 
 from scipy import signal 
+import correlate
 
 class Layer:
     def __init__(self):
@@ -42,7 +43,15 @@ class Convolutional(Layer):
 
     def forward_prop(self, input):
         '''
-        
+        This function performs the forward propagation of our convolutional neural network. It does the math of correlating the inputs
+        with the kernels, then adding the biases in (which is performed beforehand). To understand the math, please reference the README
+        and the correlate file. 
+
+        Args: 
+            input: The training data represented as a matrix.
+
+        Returns:
+            output: The predicted output represented as 
         '''
         # when function called and input is given, save the input for the conv. class to remember
         self.input = input
@@ -50,10 +59,12 @@ class Convolutional(Layer):
         # copies the biases to output 
         self.output = np.copy(self.biases)
 
-
+        # traverses the depth of the input and determines output value by correlating the input w the kernels 
         for i in range(self.depth):
             for j in range(self.input_depth):
-                self.output[i] += signal.correlate2d
+                self.output[i] += correlate.correlate2d(self.input[j],self.kernels[i,j], "valid")
+
+        return self.output
 
     def backward(self, output_grad, learning_rate):
         # given the shape of the matrix, establish a similar sized empty gradient matrix 
@@ -65,10 +76,10 @@ class Convolutional(Layer):
         # bias gradient doesn't need to be calculated since it is the same as the output gradient 
         for i in range(self.depth):
             for j in range(self.in_depth):
-                kernels_grad[i,j] = signal.correlate2d(self.input[j], output_grad[i], "valid")
+                kernels_grad[i,j] = correlate.correlate2d(self.input[j], output_grad[i], "valid")
 
                 # computing input gradient by convolving 
-                input_grad[i,j] += signal.convolve2d(output_grad[i], self.kernels[i,j], "full")
+                input_grad[i,j] += correlate.convolve2d(output_grad[i], self.kernels[i,j], "full")
 
         # update kernels.biases using gradient descent 
             self.kernels -= learning_rate * kernels_grad
@@ -89,6 +100,5 @@ class Convolutional(Layer):
         
         def backward(self, output_grad, learning_rate): 
             return np.reshape(output_grad, self.in_shape)
-        
-
-
+    
+    
