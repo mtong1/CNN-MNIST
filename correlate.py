@@ -31,8 +31,8 @@ def correlate2d(input_array, kernel, mode='valid'):
     
     return output_array
 
-def convolution2d(input_array, kernel):
+def convolution2d(input_array, kernel, mode='valid'):
     # Flip the kernel
     kernel = np.flip(kernel)
     # Call the correlate2d function with the flipped kernel
-    return correlate2d(input_array, kernel)
+    return correlate2d(input_array, kernel, mode)
