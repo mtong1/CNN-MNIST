@@ -31,19 +31,19 @@ A significant challenge in our computer vision project was scoping. Initially, w
 
 ## Improvements
 
-If we had more time, our first step would be to improve the efficiency of our code. Next, we would attempt to create a model for identifying people in images. However, during our initial research, we might encounter performance issues due to the lengthy processing time. In response, we would pivot towards using a machine learning library that specializes in convolutional neural networks to expedite our progress. Our focus would shift from understanding the intricacies of the models to their practical application.
-
-## Lessons
-
-Our team learned multiple valuable lessons for future robotic programming projects. Firstly, we recognized the importance of conducting thorough preliminary research before setting specific project goals. This helped us gain a better understanding of the problem and its potential challenges. Additionally, we realized the significance of creating a well-defined roadmap with clear deadlines and goals. The open-ended nature of the project initially posed difficulties in maintaining focus and organization. In the future, having a structured plan will be highly beneficial when tackling more open-ended and complex problems, ensuring that the team stays on track and achieves its objectives effectively.
-
+If we had more time, our first step would be to improve the efficiency of our code. When working with multi-class classification, as with MNIST, categorical cross-entropy is often more suitable than mean squared error (MSE) for the loss function. We would explore the following topics.
 - **Increase Convolution Layers**: The current network has only one convolution layer. Adding more convolutional layers can help the network learn more complex features at various levels of abstraction.
 - **Add Pooling Layers**: After convolution layers, pooling layers can be used to reduce the dimensionality of the feature maps, which helps in reducing the number of parameters and computational complexity.
 - **Normalization Layers**: We can also consider adding batch normalization layers after convolution layers or fully connected layers to stabilize and speed up the network's training.
 - **Activation Functions**:
   - **ReLU Activation**: ReLU and its variants (like Leaky ReLU or Parametric ReLU) often perform better than Sigmoid in deep networks because they help alleviate the vanishing gradient problem.
 - **Loss Functions**:
-  - **Categorical Cross-Entropy**: When working with multi-class classification, as with MNIST, categorical cross-entropy is often more suitable than mean squared error (MSE) for the loss function.
+  - **Categorical Cross-Entropy**:
+Next, we would attempt to create a model for identifying people in images. However, during our initial research, we might encounter performance issues due to the lengthy processing time. In response, we would pivot towards using a machine learning library that specializes in convolutional neural networks to expedite our progress. Our focus would shift from understanding the intricacies of the models to their practical application.
+
+## Lessons
+
+Our team learned multiple valuable lessons for future robotic programming projects. Firstly, we recognized the importance of conducting thorough preliminary research before setting specific project goals. This helped us gain a better understanding of the problem and its potential challenges. Additionally, we realized the significance of creating a well-defined roadmap with clear deadlines and goals. The open-ended nature of the project initially posed difficulties in maintaining focus and organization. In the future, having a structured plan will be highly beneficial when tackling more open-ended and complex problems, ensuring that the team stays on track and achieves its objectives effectively.
 
 
 ## Resources
