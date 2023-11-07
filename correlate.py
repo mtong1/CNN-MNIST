@@ -1,6 +1,17 @@
 import numpy as np
 
 def correlate2d(input_array, kernel, mode='valid'):
+    """
+    Perform 2D correlation between an input array and a kernel.
+
+    Parameters:
+    input_array (numpy.ndarray): The input array
+    kernel (numpy.ndarray): The kernel
+    mode (str): The mode of correlation. Can be 'full' or 'valid'. Default is 'valid'.
+
+    Returns:
+    numpy.ndarray: The output array after correlation
+    """
     # Get dimensions of input array and kernel
     input_rows, input_cols = input_array.shape
     kernel_rows, kernel_cols = kernel.shape
@@ -28,10 +39,20 @@ def correlate2d(input_array, kernel, mode='valid'):
             region = padded_input[i:i + kernel_rows, j:j + kernel_cols]
             # Compute the sum of element-wise products and store the result in the output array
             output_array[i, j] = np.sum(region * kernel)
-    
     return output_array
 
-def convolution2d(input_array, kernel, mode='valid'):
+def convolve2d(input_array, kernel, mode='valid'):
+    """
+    Perform 2D convolution between an input array and a kernel.
+
+    Parameters:
+    input_array (numpy.ndarray): The input array
+    kernel (numpy.ndarray): The kernel
+    mode (str): The mode of convolution. Can be 'full' or 'valid'. Default is 'valid'.
+
+    Returns:
+    numpy.ndarray: The output array after convolution
+    """
     # Flip the kernel
     kernel = np.flip(kernel)
     # Call the correlate2d function with the flipped kernel

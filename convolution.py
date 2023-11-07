@@ -1,9 +1,8 @@
 import numpy as np 
-from layer import layer 
-from scipy import signal 
+from layer import Layer 
 import correlate
 
-class Convolutional(Layer):
+class Convolution(Layer):
     """
     Class that defines the functions of a Convolutional Neural Network, including the forward propagation. 
     """
@@ -19,16 +18,17 @@ class Convolutional(Layer):
         self.depth = depth
         self.in_shape = in_shape 
         self.in_depth = in_depth 
+        self.output_shape = (depth, in_height - kernel_size + 1, in_width - kernel_size + 1)
         self.kernels_shape = (depth, in_depth, kernel_size, kernel_size)
         # last two are size of matrices in each kernel
 
         # instantiating randomized kernel values to start
-        self.kernels = np.random.randm(*self.kernels_shape)
+        self.kernels = np.random.randn(*self.kernels_shape)
 
         # instantiating randomized bias values to start (bias will be the shape of the output)
-        self.biases = np.random.randm(*self.output_shape)
+        self.biases = np.random.randn(*self.output_shape)
 
-    def forward_prop(self, input):
+    def forward(self, input):
         """
         This function performs the forward propagation of our convolutional neural network. It does the math of correlating the inputs
         with the kernels, then adding the biases in (which is performed beforehand). To understand the math, please reference the README
@@ -48,7 +48,7 @@ class Convolutional(Layer):
 
         # traverses the depth of the input and determines output value by correlating the input w the kernels 
         for i in range(self.depth):
-            for j in range(self.input_depth):
+            for j in range(self.in_depth):
                 self.output[i] += correlate.correlate2d(self.input[j],self.kernels[i,j], "valid")
 
         return self.output
@@ -66,7 +66,7 @@ class Convolutional(Layer):
                 kernels_grad[i,j] = correlate.correlate2d(self.input[j], output_grad[i], "valid")
 
                 # computing input gradient by convolving 
-                input_grad[i,j] += correlate.convolve2d(output_grad[i], self.kernels[i,j], "full")
+                input_grad[j] += correlate.convolve2d(output_grad[i], self.kernels[i,j], "full")
 
         # update kernels.biases using gradient descent 
             self.kernels -= learning_rate * kernels_grad

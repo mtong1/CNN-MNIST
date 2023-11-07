@@ -1,3 +1,6 @@
+import numpy as np
+from layer import Layer
+
 class Reshape(Layer):
     """
     A class used to reshape the input in the forward pass and reshape the output gradient in the backward pass.
@@ -7,7 +10,7 @@ class Reshape(Layer):
         """
         Initialize Reshape layer with input and output shapes.
 
-        Parameters:
+        Args:
         in_shape (tuple): The shape of the input.
         out_shape (tuple): The shape of the output.
         """
@@ -18,7 +21,7 @@ class Reshape(Layer):
         """
         Reshapes the input to the output shape.
 
-        Parameters:
+        Args:
         input (np.array): The input to be reshaped.
 
         Returns:
@@ -30,7 +33,7 @@ class Reshape(Layer):
         """
         Reshapes the output gradient to the input shape.
 
-        Parameters:
+        Args:
         output_grad (np.array): The gradient of the output.
         learning_rate (float): The learning rate for the backward pass.
 
