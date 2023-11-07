@@ -37,21 +37,6 @@ If we had more time, our first step would be to improve the efficiency of our co
 
 Our team learned multiple valuable lessons for future robotic programming projects. Firstly, we recognized the importance of conducting thorough preliminary research before setting specific project goals. This helped us gain a better understanding of the problem and its potential challenges. Additionally, we realized the significance of creating a well-defined roadmap with clear deadlines and goals. The open-ended nature of the project initially posed difficulties in maintaining focus and organization. In the future, having a structured plan will be highly beneficial when tackling more open-ended and complex problems, ensuring that the team stays on track and achieves its objectives effectively.
 
-## Resources
-
-- [Convolutional Neural Network from Scratch | Mathematics & Python Code](https://www.youtube.com/watch?v=Lakz2MoHy6o)
-- [But what is a neural network? | Chapter 1, Deep learning](https://www.youtube.com/watch?v=aircAruvnKk&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)
-- [Gradient descent, how neural networks learn | Chapter 2, Deep learning](https://www.youtube.com/watch?v=IHZwWFHWa-w&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi&index=3)
-- [What is backpropagation really doing? | Chapter 3, Deep learning](https://www.youtube.com/watch?v=Ilg3gGewQ5U&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi&index=4)
-- [Backpropagation calculus | Chapter 4, Deep learning](https://www.youtube.com/watch?v=tIeHLnjs5U8&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi&index=4)
-- [But what is a convolution?](https://www.youtube.com/watch?v=KuXjwB4LzSA)
-
-## Write up
-
-// Write-up details would go here
-
-### Potential Improvements for Future Work
-
 - **Increase Convolution Layers**: The current network has only one convolution layer. Adding more convolutional layers can help the network learn more complex features at various levels of abstraction.
 - **Add Pooling Layers**: After convolution layers, pooling layers can be used to reduce the dimensionality of the feature maps, which helps in reducing the number of parameters and computational complexity.
 - **Normalization Layers**: We can also consider adding batch normalization layers after convolution layers or fully connected layers to stabilize and speed up the network's training.
@@ -60,6 +45,12 @@ Our team learned multiple valuable lessons for future robotic programming projec
 - **Loss Functions**:
   - **Categorical Cross-Entropy**: When working with multi-class classification, as with MNIST, categorical cross-entropy is often more suitable than mean squared error (MSE) for the loss function.
 
-### Lessons for Future Robotic Programming Projects
 
-// Lessons learned details would go here
+## Resources
+
+- [Convolutional Neural Network from Scratch | Mathematics & Python Code](https://www.youtube.com/watch?v=Lakz2MoHy6o)
+- [But what is a neural network? | Chapter 1, Deep learning](https://www.youtube.com/watch?v=aircAruvnKk&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi)
+- [Gradient descent, how neural networks learn | Chapter 2, Deep learning](https://www.youtube.com/watch?v=IHZwWFHWa-w&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi&index=3)
+- [What is backpropagation really doing? | Chapter 3, Deep learning](https://www.youtube.com/watch?v=Ilg3gGewQ5U&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi&index=4)
+- [Backpropagation calculus | Chapter 4, Deep learning](https://www.youtube.com/watch?v=tIeHLnjs5U8&list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi&index=4)
+- [But what is a convolution?](https://www.youtube.com/watch?v=KuXjwB4LzSA)
