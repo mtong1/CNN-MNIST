@@ -46,7 +46,7 @@ class Convolution(Layer):
         # copies the biases to output 
         self.output = np.copy(self.biases)
 
-        # traverses the depth of the input and determines output value by correlating the input w the kernels 
+        # traverses the depth of the input and determines output value by correlating the input w each of the kernels 
         for i in range(self.depth):
             for j in range(self.in_depth):
                 self.output[i] += correlate.correlate2d(self.input[j],self.kernels[i,j], "valid")
