@@ -54,12 +54,22 @@ class Convolution(Layer):
         return self.output
 
     def backward(self, output_grad, learning_rate):
+        '''
+        This function performs the backward propagation of our convolutional neural network. It establishes and updates the gradients
+        for input and kernels based on the output gradients and each other. Note that this function was not written by our team, but
+        it still uses our self-written correlate and convolve functions for the vital math aspects. 
+        Args:
+            output_grad (np.ndarray): The output gradient, in the form of a matrix.
+            learning_rate (int): The learning rate that we want the propagation to run at. 
+
+        Returns:
+            input_grad (np.ndarray): The input gradient, in the form of a matrix. 
+        '''
         # given the shape of the matrix, establish a similar sized empty gradient matrix 
         kernels_grad = np.zeros(self.kernels_shape) 
         input_grad = np.zeros(self.in_shape)        
 
         # using two for loops to compute the kernel gradient for each kernel of given depth
-        # which is 
         # bias gradient doesn"t need to be calculated since it is the same as the output gradient 
         for i in range(self.depth):
             for j in range(self.in_depth):
