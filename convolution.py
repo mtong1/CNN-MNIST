@@ -38,7 +38,7 @@ class Convolution(Layer):
             input: The training data represented as a matrix.
 
         Returns:
-            output: The predicted output represented as 
+            output (np.ndarray): The predicted output represented as a matrix. 
         """
         # when function called and input is given, save the input for the conv. class to remember
         self.input = input
