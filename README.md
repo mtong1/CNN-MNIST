@@ -3,6 +3,8 @@
 **Authors**: An Grocki, Anmol Sandhu, Madie Tong  
 **Course**: Computational Introduction to Robotics Fall 2023
 
+This project is based on the [Neural Network from Scratch](https://github.com/TheIndependentCode/Neural-Network/tree/master) by [TheIndependentCode](https://github.com/TheIndependentCode).
+
 ## Goal
 
 Our goal for this project was to delve deeply into the mathematics, logic, and theoretical foundations behind Convolutional Neural Networks (CNNs). We recognized that gaining a comprehensive understanding of neural networks required more than just theoretical knowledge, so our primary objective was to implement a CNN from the ground up. We avoided the use of common machine learning libraries such as TensorFlow and Keras because they obscured the intricate details of CNNs and had multiple unknown functions.
@@ -84,6 +86,14 @@ Next, we would attempt to create a model for identifying people in images. Howev
 ## Lessons
 
 Our team learned multiple valuable lessons for future robotic programming projects. Firstly, we recognized the importance of conducting thorough preliminary research before setting specific project goals. This helped us gain a better understanding of the problem and its potential challenges. Additionally, we realized the significance of creating a well-defined roadmap with clear deadlines and goals. The open-ended nature of the project initially posed difficulties in maintaining focus and organization. In the future, having a structured plan will be highly beneficial when tackling more open-ended and complex problems, ensuring that the team stays on track and achieves its objectives effectively.
+
+## Our Contributions
+
+Our project builds upon the foundational concepts and structures from the [Neural Network from Scratch](https://github.com/TheIndependentCode/Neural-Network/tree/master) tutorial. We have added the following contributions to help enhance our learning:
+
+- **Custom Convolution Implementation**: We developed our own code for the convolution operations, diverging from the tutorial's approach. This allowed us to gain a deeper understanding of the mathematical concepts behind the convolution operation and its implementation in neural networks.
+- **Enhanced Documentation**: To improve the clarity and maintainability of the code, we extensively documented the existing codebase. This included adding docstrings for each function and more in-line comments.
+- **Object-Oriented Refactoring**: We restructured the code to adopt a more object-oriented approach. This helped us to better understand how the various parts of a neural network connect and interact with each other.
 
 ## Resources
 
