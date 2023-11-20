@@ -1,3 +1,7 @@
+"""
+Based on 'Neural Network from Scratch' by TheIndependentCode.
+Source: https://github.com/TheIndependentCode/Neural-Network/blob/master/dense.py
+"""
 import numpy as np
 from layer import Layer
 

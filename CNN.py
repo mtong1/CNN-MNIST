@@ -1,3 +1,7 @@
+"""
+Based on 'Neural Network from Scratch' by TheIndependentCode.
+Source: https://github.com/TheIndependentCode/Neural-Network/blob/master/mnist_conv.py
+"""
 import h5py
 import numpy as np
 from keras.utils import to_categorical

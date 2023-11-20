@@ -1,3 +1,7 @@
+"""
+Based on 'Neural Network from Scratch' by TheIndependentCode.
+Source: https://github.com/TheIndependentCode/Neural-Network/blob/master/network.py
+"""
 class NN:
     """
     Represents a neural network.
