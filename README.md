@@ -20,8 +20,7 @@ What differentiates a CNN versus other neural networks is with its use of convol
 
 ### Implementation
 
-The CNN-MNIST project is structured as a series of Python modules that collectively build a convolutional neural network (CNN) designed to classify handwritten digits from the MNIST dataset. Below is an overview of the implementation details for each component of the project:
-(The implementation was written and based on [Neural Network from Scratch](https://github.com/TheIndependentCode/Neural-Network/tree/master) by [TheIndependentCode](https://github.com/TheIndependentCode))
+The CNN-MNIST project is structured as a series of Python modules that collectively build a convolutional neural network (CNN) designed to classify handwritten digits from the MNIST dataset. Below is an overview of the implementation details for each component of the project (The implementation was written and based on [Neural Network from Scratch](https://github.com/TheIndependentCode/Neural-Network/tree/master) by [TheIndependentCode](https://github.com/TheIndependentCode)):
 
 #### Network Initialization
 
@@ -95,7 +94,7 @@ Our team learned multiple valuable lessons for future robotic programming projec
 
 Our project builds upon the foundational concepts and structures from the [Neural Network from Scratch](https://github.com/TheIndependentCode/Neural-Network/tree/master) tutorial. We have added the following contributions to help enhance our learning:
 
-- **Custom Convolution Implementation**: We developed our own code for the convolution operations, diverging from the tutorial's approach. This allowed us to gain a deeper understanding of the mathematical concepts behind the convolution operation and its implementation in neural networks.
+- **Custom Convolution Implementation**: We developed our own code for the convolution operations, diverging from the tutorial's approach in correlate.py and convolution.py. This allowed us to gain a deeper understanding of the mathematical concepts behind the convolution operation and its implementation in neural networks.
 - **Enhanced Documentation**: To improve the clarity and maintainability of the code, we extensively documented the existing codebase. This included adding docstrings for each function and more in-line comments.
 - **Object-Oriented Refactoring**: We restructured the code to adopt a more object-oriented approach. This helped us to better understand how the various parts of a neural network connect and interact with each other.
 
