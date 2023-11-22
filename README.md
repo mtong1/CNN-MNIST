@@ -8,6 +8,7 @@ This project is based on the [Neural Network from Scratch](https://github.com/Th
 ## Goal
 
 Our goal for this project was to delve deeply into the mathematics, logic, and theoretical foundations behind Convolutional Neural Networks (CNNs). We recognized that gaining a comprehensive understanding of neural networks required more than just theoretical knowledge, so our primary objective was to implement a CNN from the ground up. We avoided the use of common machine learning libraries such as TensorFlow and Keras because they obscured the intricate details of CNNs and had multiple unknown functions.
+We used the Neural Network from Scratch video and code by The Independent Code to focus our understanding on our goals.
 
 We chose to focus on CNNs because they are important and relevant in computer vision and robotics.
 
@@ -15,11 +16,12 @@ We chose to focus on CNNs because they are important and relevant in computer vi
 
 ### Math Behind the CNN
 
-What differentiates a CNN versus other neural networks is with its use of convolutions/correlations. To understand this fundamentally, we used various resources and took notes. All mathematical explanations for the processes used in our implementation can be found in this [pdf](./CNN-math.pdf).
+What differentiates a CNN versus other neural networks is with its use of convolutions/correlations. To understand this fundamentally, we used various resources and took notes mainly from Neural Network from Scratch by The Independent Code. All mathematical explanations for the processes used in our implementation can be found in this [pdf](./CNN-math.pdf).
 
 ### Implementation
 
 The CNN-MNIST project is structured as a series of Python modules that collectively build a convolutional neural network (CNN) designed to classify handwritten digits from the MNIST dataset. Below is an overview of the implementation details for each component of the project:
+(The implementation was written and based on [Neural Network from Scratch](https://github.com/TheIndependentCode/Neural-Network/tree/master) by [TheIndependentCode](https://github.com/TheIndependentCode))
 
 #### Network Initialization
 
@@ -65,7 +67,9 @@ The modular design of the project allows for easy modification and extension of 
 
 After our primary research, we made a deliberate choice to prioritize learning over computational efficiency. Our project focused on the creation of a custom CNN to identify handwritten digits from the MNIST dataset. We chose to include numpy libraries because it includes matrix math and implementation of mathematical procedures. Numpy was a good balance between understanding the theory and math while being computationally fast.
 
-Our initial focus was on forward propagation, where we aimed to understand how input data traverses through the layers of a CNN to produce meaningful predictions. As we advanced in our project, we also implemented backward propagation.
+Our initial focus was on forward propagation, where we aimed to understand how input data traverses through the layers of a CNN to produce meaningful predictions. As we progressed further in our project, we gained a comprehensive understanding of the mathematical principles underpinning backward propagation. Unfortunately, due to time constraints, we were unable to implement it into our project. We used the existing backward propagation from The Independent Code. 
+
+After reseraching neural networks and watching numerous tutorials and explanations, we choose to base our project off of [Neural Network from Scratch](https://github.com/TheIndependentCode/Neural-Network/tree/master) by [TheIndependentCode](https://github.com/TheIndependentCode). The video provided a clear and concise explanation of the math and code, which significantly contributed to achieving our learning objectives of comprehending and successfully implementing a part of neural network.
 
 ## Challenges
 
